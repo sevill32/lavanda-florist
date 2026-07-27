@@ -1,0 +1,614 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Lavanda Florist | Premium Modern Floral Curator</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#e1dfdc",
+                        "on-surface-variant": "#4b444d",
+                        "tertiary-fixed-dim": "#c7cc7d",
+                        "secondary-fixed": "#e4e2de",
+                        "surface-container-highest": "#e8e0e5",
+                        "lavender-deep": "#8E6DA3",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#474744",
+                        "surface-bright": "#fff7fc",
+                        "on-tertiary": "#ffffff",
+                        "lavender-mist": "#E6DFF0",
+                        "on-primary-fixed": "#2b0d3c",
+                        "outline": "#7d747e",
+                        "status-green": "#74A892",
+                        "primary-container": "#8a689c",
+                        "surface-tint": "#725284",
+                        "on-surface": "#1e1b1e",
+                        "floral-cream": "#FAF5EF",
+                        "on-tertiary-fixed-variant": "#464a08",
+                        "surface-dim": "#dfd8dd",
+                        "secondary-fixed-dim": "#c8c6c3",
+                        "tertiary-fixed": "#e3e897",
+                        "price-accent": "#D97D54",
+                        "background": "#fff7fc",
+                        "inverse-on-surface": "#f6eff4",
+                        "on-primary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f9f1f6",
+                        "tertiary": "#5b601e",
+                        "error-container": "#ffdad6",
+                        "text-charcoal": "#2D2D2D",
+                        "secondary": "#5e5e5c",
+                        "on-secondary-fixed": "#1b1c1a",
+                        "tertiary-container": "#747934",
+                        "inverse-primary": "#e0b8f2",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#eee6eb",
+                        "on-background": "#1e1b1e",
+                        "outline-variant": "#cec3ce",
+                        "primary-fixed-dim": "#e0b8f2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f3ecf1",
+                        "surface": "#fff7fc",
+                        "surface-variant": "#e8e0e5",
+                        "inverse-surface": "#332f33",
+                        "on-primary-fixed-variant": "#593a6b",
+                        "on-tertiary-fixed": "#1b1d00",
+                        "primary-fixed": "#f5d9ff",
+                        "on-secondary-container": "#636360",
+                        "on-secondary": "#ffffff",
+                        "primary": "#704f81",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffffd8"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap-lg": "120px",
+                        "gutter": "24px",
+                        "section-gap-sm": "64px",
+                        "stack-gap": "12px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "price-display": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "price-display": ["20px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-card {
+            background: rgba(255, 247, 252, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(230, 223, 240, 0.3);
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+        }
+        .animate-bounce-slow { animation: bounce-slow 2s infinite; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-lavender-mist selection:text-lavender-deep">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<img alt="Lavanda Florist Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsUtYlz5PdsIFs9EaBNWld7tcf0fLXhmhvGxSy1ub4IAUSqxyQZtXoNqKFKmaNe47ICfFB-VVA96lxKrQ9Y3lNSh3AN-Pie8Ah_0qxWg7V6tslPg9uNCNUKzndIXZ4LEC1etv06z4R5u6eDrzZCPFspWiyZyzzoaOjfUmsUuDr3Mi_j1b-fXR0Y2wE7h9d777W_8KECST1h4nh1i1HQtdqDVft5LfIfBFY622P_FJQNfvj6geNAXrScHv7t">
+<span class="hidden md:block font-headline-md text-headline-md font-bold text-lavender-deep">Lavanda Florist</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-lavender-deep border-b-2 border-lavender-deep pb-1 font-bold" href="#">Beranda</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#about">Tentang Kami</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#katalog">Katalog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#blog">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#contact">Kontak</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center px-6 py-2.5 bg-lavender-deep text-white rounded-full font-label-md text-label-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300" href="https://wa.link/yfwmwg" target="_blank">
+                    Hubungi Kami
+                </a>
+<button class="md:hidden text-lavender-deep">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[20s] hover:scale-110" data-alt="A cinematic, shallow depth-of-field photograph of high-end floristry tools, rustic twine, and delicate white baby's breath flowers scattered on a textured brown craft paper surface. The lighting is soft and golden, suggesting a warm afternoon in a boutique European florist shop. The color palette is dominated by organic earth tones, soft creams, and muted greens, creating a luxurious and serene atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCC-oQImUtDgW3FcIVA94PO4xeo3CvuHvuJI01YLqkBZmeSW3AklxZrX_mRshxiA0qX7C_VX6Z0Opnmzqo8tSpQJDn5m695VwNugFosovnjvCTQZqz4mt0nIYSxsne0so8WlZ7fyUfydeyAPZwYXpnNhdvxz3uZlf7--v7eKBOrgCPiOzF8xIJ6Gt9zT9mMLu2PA7XV2oMFlAa-aNcrhCLbcTC-m9tWIWH0JWx_O94QtrHofL58GGBcenaKElRIKMIlp5x5cIlDGGwc')"></div>
+<div class="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter text-center text-white">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 max-w-4xl mx-auto drop-shadow-xl">
+                Rangkaian Bunga Indah untuk Setiap Momen Berharga
+            </h1>
+<p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto text-white/90 drop-shadow-md">
+                Lavanda Florist menghadirkan berbagai rangkaian bunga berkualitas untuk hadiah, ucapan selamat, pernikahan, duka cita, dan berbagai kebutuhan spesial Anda.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="px-10 py-4 bg-white text-lavender-deep rounded-full font-label-md text-label-md hover:bg-lavender-mist transition-all duration-300 shadow-xl" href="#katalog">
+                    Lihat Katalog
+                </a>
+<a class="px-10 py-4 bg-lavender-deep text-white rounded-full font-label-md text-label-md border-2 border-lavender-mist/30 hover:bg-white hover:text-lavender-deep transition-all duration-300 shadow-xl" href="https://wa.link/yfwmwg">
+                    Pesan via WhatsApp
+                </a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow">
+<span class="text-white/60 font-label-md text-[10px] uppercase tracking-widest">Scroll</span>
+<span class="material-symbols-outlined text-white">expand_more</span>
+</div>
+</section>
+<!-- Why Choose Us / Advantage Section -->
+<section class="py-section-gap-sm bg-floral-cream">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
+<div class="bg-white p-6 rounded-xl shadow-sm text-center border border-outline-variant/30 hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-lavender-deep text-4xl mb-3">local_florist</span>
+<h3 class="font-label-md text-label-md text-on-surface">100% Bunga Segar</h3>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm text-center border border-outline-variant/30 hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-lavender-deep text-4xl mb-3">support_agent</span>
+<h3 class="font-label-md text-label-md text-on-surface">Layanan 24/7</h3>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm text-center border border-outline-variant/30 hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-lavender-deep text-4xl mb-3">auto_awesome</span>
+<h3 class="font-label-md text-label-md text-on-surface">Desain Eksklusif</h3>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm text-center border border-outline-variant/30 hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-lavender-deep text-4xl mb-3">local_shipping</span>
+<h3 class="font-label-md text-label-md text-on-surface">Tepat Waktu</h3>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm text-center border border-outline-variant/30 hover:-translate-y-2 transition-transform col-span-2 md:col-span-1">
+<span class="material-symbols-outlined text-lavender-deep text-4xl mb-3">sell</span>
+<h3 class="font-label-md text-label-md text-on-surface">Harga Kompetitif</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap-lg overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-20 items-center">
+<div class="reveal relative active">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A majestic and elegant floral standing arrangement featuring a mix of royal purple, soft lavender, and pristine white flowers including lilies and roses, framed by lush green ferns. The lighting is professional and high-contrast, set against a clean white wall which makes the vibrant colors pop. The arrangement exudes a sense of luxury, dignity, and expert craftsmanship in floral design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlIdUl4P70xwAzghOTTnPmGOA2_NI744JTElCCwAFTVyU0TvBXPCaT0Fomd97U65kiKA2BPyfS-LgVDDAnTZY1LxUauMgxnoEbKNL6ehH9rvNCB93blY8xqoYo5jDFCJU9LQeJW4k7YFdsAurHWjtgL423DmOPhYvR_DaKz_cTj-Q256EWaSbikzDULoAzwveMIDriiPit1V2JxC_EkqOJ1WFcRWJYKfFkCL4u72IBSbb-oFwv1xB_2DYQXZzYCDrc-HKGHZ9JaAnh">
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-lavender-mist/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -top-10 -left-10 w-48 h-48 bg-primary-container/10 rounded-full blur-2xl -z-10"></div>
+</div>
+<div class="reveal active">
+<h6 class="font-label-md text-label-md text-lavender-deep uppercase tracking-widest mb-4">Mengenal Kami</h6>
+<h2 class="font-headline-md text-headline-md mb-8 text-on-surface">Tentang "Lavanda Florist"</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Di tengah hiruk pikuk kehidupan modern, ada kebahagiaan sederhana yang bisa kita temukan dalam keindahan bunga. Di <span class="text-lavender-deep font-semibold">Lavanda Florist</span>, kami percaya bahwa setiap helai bunga menceritakan kisah—kisah cinta, kebersamaan, sukacita, dan penghargaan.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                    Sebagai florist online terpercaya, kami hadir untuk menghadirkan keindahan alam langsung ke pintu Anda, mengubah momen biasa menjadi kenangan tak terlupakan.
+                </p>
+<div class="grid grid-cols-2 gap-6 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lavender-deep" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md">Pelayanan Ramah</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lavender-deep" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md">Pengerjaan Cepat</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lavender-deep" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md">Bunga Berkualitas</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lavender-deep" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md">Desain Elegan</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-3 font-label-md text-label-md text-lavender-deep hover:gap-5 transition-all group" href="#katalog">
+                    Eksplor Katalog Lengkap 
+                    <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Katalog Section -->
+<section class="py-section-gap-lg bg-surface-container-low" id="katalog">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 reveal active">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Produk Unggulan Kami</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    Kami menawarkan berbagai jenis florist sesuai dengan kebutuhan dan keinginan Anda, mulai dari hiasan meja hingga ucapan papan bunga besar.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Bunga Anggrek Bulan -->
+<div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/30 flex flex-col group active">
+<div class="aspect-square overflow-hidden">
+<img alt="Bunga Anggrek Bulan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsro5werP1N2UUXv3FYutLNDUJlEtFpP4FGgxDGoLQp9iV1nGyt8bNKqPVe3djNIMCusjCHgJEJMdUMfO4JXEn_GgCkevoTBL5UI5JcNaCBEfkf00FBucFcv0nHVhoy0Nfwqf8L8_Svwu0QhK98uREq5HoNNOC_YDwomTtrIyT60bnkJpiTREbRHiryGYxa_3ksBfXIBkMmxrxz8Z7Vuc_SAHFbpZJr2rV1XNbes3HANZgJKi0LJZUlHCWY">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Bunga Anggrek Bulan</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Anggrek bulan (Phalaenopsis) adalah simbol keanggunan, kemurnian, dan panjang umur.</p>
+<div class="flex items-end justify-between mb-8">
+<div>
+<p class="text-xs text-on-surface-variant line-through mb-1">Rp950.000</p>
+<p class="font-price-display text-price-display text-lavender-deep">Rp500.000</p>
+</div>
+<span class="px-3 py-1 bg-status-green/10 text-status-green rounded-full font-label-md text-[10px] uppercase tracking-wider">Tersedia</span>
+</div>
+<a class="w-full py-4 bg-lavender-mist text-lavender-deep rounded-xl text-center font-label-md hover:bg-lavender-deep hover:text-white transition-colors flex items-center justify-center gap-2" href="https://wa.link/yfwmwg">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                            Pesan via WhatsApp
+                        </a>
+</div>
+</div>
+<!-- Bunga Buket -->
+<div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/30 flex flex-col group active">
+<div class="aspect-square overflow-hidden">
+<img alt="Bunga Buket" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtA1XcFSl3hyvcQyju-bGT2jKOckJzRxbjgh_sRTq4U_IkIubrNlO6-dgA6iCeLi4L5i0hbDbz-S8-bfbqWj7ioH6R2BP-a2z5lKBAd0miprBs3yZW72eKO64syJAKIKnoMW397wrPTtZGGwqTY2_xQCeiMxeFFrpAIPRDgjcSkKeqIrC3gR4ODCQFb4vi-kFzgUWzkXEgnUPdDyZuV742QJqvtadhDRX8jlTuwaZhFon-AZemUTRXMI2j6">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Bunga Buket</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Kami menawarkan berbagai pilihan buket bunga yang dirancang khusus untuk setiap kesempatan spesial.</p>
+<div class="flex items-end justify-between mb-8">
+<div>
+<p class="text-xs text-on-surface-variant line-through mb-1">Rp600.000</p>
+<p class="font-price-display text-price-display text-lavender-deep">Rp300.000</p>
+</div>
+<span class="px-3 py-1 bg-status-green/10 text-status-green rounded-full font-label-md text-[10px] uppercase tracking-wider">Tersedia</span>
+</div>
+<a class="w-full py-4 bg-lavender-mist text-lavender-deep rounded-xl text-center font-label-md hover:bg-lavender-deep hover:text-white transition-colors flex items-center justify-center gap-2" href="https://wa.link/yfwmwg">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                            Pesan via WhatsApp
+                        </a>
+</div>
+</div>
+<!-- Bunga Meja -->
+<div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/30 flex flex-col group active">
+<div class="aspect-square overflow-hidden">
+<img alt="Bunga Meja" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsYDYdRo2u-N7KVczOFkyycM0hy6vuH_Z0CmwO6k50ZdtTGN8qup1euZIaqPGnrDjejNy7eh-tP1TNuXrhKy1k7TS75vdn2vSQKBfWXGxKlQ5Zd3xAWxWLfQbIuoxdVKNXkLeRgBHHX0xvXN_nEzRynVHn6VQkbxucEf9N00TvZFWSjSjiCH5Ip-xa-W1pSIAlWblaIKknJrw6koxtor5NJ3Pc9H_m6eWvomShBiNjiHegV_cCiWNLqCx0u">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Bunga Meja</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Membawa nuansa alam ke ruang tamu atau kantor Anda dengan aransemen yang menyegarkan.</p>
+<div class="flex items-end justify-between mb-8">
+<div>
+<p class="text-xs text-on-surface-variant line-through mb-1">Rp1.000.000</p>
+<p class="font-price-display text-price-display text-lavender-deep">Rp700.000</p>
+</div>
+<span class="px-3 py-1 bg-status-green/10 text-status-green rounded-full font-label-md text-[10px] uppercase tracking-wider">Best Seller</span>
+</div>
+<a class="w-full py-4 bg-lavender-mist text-lavender-deep rounded-xl text-center font-label-md hover:bg-lavender-deep hover:text-white transition-colors flex items-center justify-center gap-2" href="https://wa.link/yfwmwg">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                            Pesan via WhatsApp
+                        </a>
+</div>
+</div>
+<!-- Bunga Papan -->
+<div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/30 flex flex-col group active">
+<div class="aspect-square overflow-hidden">
+<img alt="Bunga Papan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsXZbTCN8uTlXpVstf2XKymjmvztvm_Ps2b9UZxOdgp1VSDSZH9iBO95E0GgIjsBKlxmHvbz_Qx_jRkW9EAAHH96orofcsvEC_y39-BX9c0XcpV_f4oDA_uts_Y35E38i8rsXUHN1cWYxU3OeQP6Gg5dkmI8_IaTHILgeZGF-bXHzjg_38lEFcGMvoHulZuOAa1DnO2FjOlNeYvLO-YHH00rgaV0FjaJi4xXAfI1FVdocuKkYYDV4olhFcd">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Bunga Papan</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Hadir sebagai bentuk penghormatan yang anggun untuk acara besar, pernikahan, atau duka cita.</p>
+<div class="flex items-end justify-between mb-8">
+<div>
+<p class="text-xs text-on-surface-variant line-through mb-1">Rp1.000.000</p>
+<p class="font-price-display text-price-display text-lavender-deep">Mulai Rp500.000</p>
+</div>
+<span class="px-3 py-1 bg-status-green/10 text-status-green rounded-full font-label-md text-[10px] uppercase tracking-wider">Tersedia</span>
+</div>
+<a class="w-full py-4 bg-lavender-mist text-lavender-deep rounded-xl text-center font-label-md hover:bg-lavender-deep hover:text-white transition-colors flex items-center justify-center gap-2" href="https://wa.link/yfwmwg">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                            Pesan via WhatsApp
+                        </a>
+</div>
+</div>
+<!-- Bunga Standing -->
+<div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/30 flex flex-col group active">
+<div class="aspect-square overflow-hidden">
+<img alt="Bunga Standing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvg5poxyUAuE4U68SLRlodmYddguowcQQLfF6ZYm1f6r4zl_h3BpZVJapkDYrdRhuntJG9N1lmEVyhPZsxjxS9pexI_HZq6B8xdoA6WOl58SJcd2gQ3q1sOgJ-TpNGMeV9_y5p4TMzZDlD-kYLYJCK9fyivhdVY6VnCH-IF-qi8oDh0mtX_69AFnpdra9JF_4Y30ozR7ScidqbNPYM1H_l0TIKRZto92Slo4L_FfP6U_kVZ8dhaIRt1n2In">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Bunga Standing</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Karangan bunga berdiri yang megah, cocok sebagai ucapan selamat sukses atau takziah.</p>
+<div class="flex items-end justify-between mb-8">
+<div>
+<p class="text-xs text-on-surface-variant line-through mb-1">Rp1.500.000</p>
+<p class="font-price-display text-price-display text-lavender-deep">Mulai Rp750.000</p>
+</div>
+<span class="px-3 py-1 bg-status-green/10 text-status-green rounded-full font-label-md text-[10px] uppercase tracking-wider">Premium</span>
+</div>
+<a class="w-full py-4 bg-lavender-mist text-lavender-deep rounded-xl text-center font-label-md hover:bg-lavender-deep hover:text-white transition-colors flex items-center justify-center gap-2" href="https://wa.link/yfwmwg">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                            Pesan via WhatsApp
+                        </a>
+</div>
+</div>
+<!-- Custom Request -->
+<div class="reveal bg-lavender-deep rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border-none flex flex-col group relative active">
+<div class="absolute top-0 right-0 p-10 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-white">volunteer_activism</span>
+</div>
+<div class="p-10 flex flex-col flex-grow z-10 text-white h-full justify-center">
+<h3 class="font-headline-md text-headline-md mb-6">Request Khusus</h3>
+<p class="text-white/80 font-body-md mb-10 text-lg">Konsultasikan kebutuhan bunga Anda bersama konsultan hebat kami. Layanan konsultasi gratis untuk acara spesial Anda.</p>
+<a class="inline-block py-5 bg-white text-lavender-deep rounded-xl text-center font-label-md text-lg hover:bg-lavender-mist transition-all transform hover:scale-105" href="https://wa.link/ok0e24">
+                            Order Custom Desain
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section (Masonry) -->
+<section class="py-section-gap-lg bg-floral-cream">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 reveal active">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Galeri Kreativitas</h2>
+<p class="font-body-md text-on-surface-variant">Intip hasil karya terbaik para florist profesional kami.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="reveal rounded-2xl overflow-hidden shadow-md aspect-square group active">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtL8ziW2F8s5xZR6oY64_r5RmYqGStKZCadIY-D1cOptxvCANBCIaASB7RQCeDmTF2_QeYoJUERtptbRZHUGrX4TF9kGBozI_M-39JzsZ-ofTFCg1cDCFagYUvuxtdgaH4DQkQTud1wkHPvGiRlOzH__TqHQwf-Vm0q0l6fFaKgzfI73jYJu9-ji4loMwHCf1hoyTECerM7vNdz5W_0DfnRfS5tj_NsuDP_GJ94SRkdTPHoVYmjedk3fKxh" alt="Gallery Image 1">
+  </div>
+  <div class="reveal rounded-2xl overflow-hidden shadow-md aspect-square group active">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuloPR05FI1rMhly2tx3oh6N99oR2ANtQuLUQ7oJRFBmKyqOTCaY4UsExRRIP8sjx5s1nYKXzs_PUmYgdhktX8WfEhzzk0qUWgo79tGezgBWh9hhZR2WHwomuyRJLPOiFDRW0S0P7eUbhn-ITzeNSuPTH9cIBs_WpUn5wkkVr9-WlT26xAyRiRVaw2HrP40LmSWL3T7VAEbrVp77cJALpkV8Jer4klvzpAYqt7_dqJeleJpSQzBW_FfTVaU" alt="Gallery Image 2">
+  </div>
+  <div class="reveal rounded-2xl overflow-hidden shadow-md aspect-square group active">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLur7zOsYmlNLqKrHN9scnVaaGUFhX03zMAkybqlLgDhAPhaT8Yu_fgyL6wrNapfsayqtaeQxHZGuoWjsurEKfnJOis-Eb89oy_DcFY6LaSWYDqFTdp4qIo1eaV0mIqi7Fc6yhTOF5TdfzX0aPVD_Yzd4LJ-6CNhCrZLT8GrRVLYwhNqdRJYyUSN3x3n_Pvf1SVe7FssgzQtoLdTZRm48iof-rBb1hUdy45Xl3RQWbz833zyXCS2rcim09ob" alt="Gallery Image 3">
+  </div>
+  <div class="reveal rounded-2xl overflow-hidden shadow-md aspect-square group active">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtgwJaBOCV2M1tUPlm2SFdrkKHgr1yNX1dXvs0OrbaHETMVdXO8GQkqOsz4h12SwtuMiU8UaifC_23NXxVu3ooKSil2UsS9Gi8FPmq2TtaPMtK7n7uE_jqIFSfv9Rtu4tyXvLvyipI-U01IedWAkt2_D8mcMM6p5q9h8q7eD45UDQuV7y6djQFd25RQt3pz4_IsssVLJ-eeQWJF516suY_EaPXuFTkUmFemeBnrp1GynnlFumU4TCGWD9yi" alt="Gallery Image 4">
+  </div>
+  <div class="reveal rounded-2xl overflow-hidden shadow-md aspect-square group active">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuH4s-b9RrcGAJswyGasxGGGjondkKjgc6-qTh_U6vUDNlxHiiMV-H2x2xQd3FH-2Klz4TnyTeP4Ee7H18U1KJBLHdhtvxSuBYt-ih1011DxTsm_OMDSfw7PonSAhQMSUAyDDIdw517bTox7EDdG9DZHiJ833LK35SHDtOEU4EY-vrMUrvVHVrL8th7Ppi4Lgi0oyDjqvaj4Fp3bZbqncZgBvHoqIVGAJJDViEdmOdcwjajec3U4yudhj00" alt="Gallery Image 5">
+  </div>
+  <div class="reveal rounded-2xl overflow-hidden shadow-md aspect-square group active">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtdpwsuza6Fm-L81H6XjuVuj3Bjapqpgbo3uv8uAOZn_AtX9Hi0NZivS1mkVLByrWaVpxzwyFIaUTbxk2MDnaIRHDG5meSFK7m1lHDJr6CTu_nUeVhNsdTKcc9yN-EdcbMK6AHyuAYoRYrYa6lXAnfOqvoqeOS0ncEBcO5T8uyFlxciUDjaLJCTZga2ZhSqqM6RHSz8E_ejeJpj_ZOHb1h56MGkFK5hEbyXEw2PTqx6DC0MRNeXcUsz3BFT" alt="Gallery Image 6">
+  </div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-section-gap-lg" id="blog">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal active">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Inspirasi &amp; Edukasi</h2>
+<p class="font-body-md text-on-surface-variant">Temukan artikel menarik seputar dunia bunga.</p>
+</div>
+<a class="mt-4 md:mt-0 text-lavender-deep font-label-md flex items-center gap-2 hover:underline" href="#">
+                    Lihat Semua Artikel <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<article class="reveal group cursor-pointer active">
+<div class="rounded-2xl overflow-hidden mb-6 aspect-[16/10]">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph showing fresh water droplets glistening on the delicate petals of a vibrant pink rose. The background is a soft, out-of-focus green garden. The lighting is crisp morning light, emphasizing the life and freshness of the flower. This image represents tips for keeping flowers fresh and vibrant." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYd_n8EC91Wl8958QHkctaUTaaFHnrPSPRjqKbpHaH8nmVXWWfEcUPfWBH4cyYoc2HJyHelu833rDkHolOllLGo7qpvUUxsKwgtYS1u54o_L-rwfRvKJ1ABN8vjzaxAp3qKarfQXC2iecCnO5iUYHlhosVqUlo67Gb4M4emB1bt1hULf40D3ieZ7vOp623Fyp9B6ZTpcLqQh672YCGlf4D7E3ZJwYeKiw3GMkEs9BF1xbzaYrb69jQjh0k0kMuLlYlToyG9x0tKlcP')"></div>
+</div>
+<span class="text-xs font-label-md text-lavender-deep mb-2 block">TIPS &amp; TRICK</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 group-hover:text-lavender-deep transition-colors">5 Cara Sederhana Menjaga Bunga Tetap Segar Lebih Lama</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3">Pelajari rahasia menjaga buket bunga kesayangan Anda tetap indah dan wangi selama berminggu-minggu dengan teknik sederhana ini.</p>
+</article>
+<article class="reveal group cursor-pointer active">
+<div class="rounded-2xl overflow-hidden mb-6 aspect-[16/10]">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="An elegant flat lay of various white and yellow flowers arranged symbolically on a clean lavender-colored surface. A small handwritten note sits in the center. The lighting is soft and even, highlighting the diverse shapes of the petals. The mood is poetic and reflective, illustrating the hidden language and meanings of different flowers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIFgI4F20KpnlyllNpq0-sOb_cpqwgTGWza_vnDgn23fuGDjBgH9yuxbag7O6xnekmGU0PrircYzuuZXwqTJH7VvcSMRdt4ISFHq8ia1Op1HKAEWhowPRDv01EIQGpOPhECZ7V6XbtauLNtAvSjSR4Cc4AL70yknDUVI0lAZVNSwzsnyrrmIpAtMJanyPp8DliMTG01sNOyE5ec2nxXJWYAwz3NqFzVdohjELtg1rbK-L1gOTVPgcBPypbtBXmyxFajcrcogUiGjke')"></div>
+</div>
+<span class="text-xs font-label-md text-lavender-deep mb-2 block">FILOSOFI</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 group-hover:text-lavender-deep transition-colors">Makna Tersembunyi Dibalik Setiap Warna Bunga Mawar</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3">Jangan salah pilih! Setiap warna mawar memiliki pesan yang berbeda. Ketahui artinya sebelum memberikan hadiah kepada orang terkasih.</p>
+</article>
+<article class="reveal group cursor-pointer active">
+<div class="rounded-2xl overflow-hidden mb-6 aspect-[16/10]">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A modern, high-end wedding reception table setup featuring minimalist floral decorations. Slim gold vases hold single stems of orchids and lilies, creating a clean and luxurious look. The lighting is warm and candlelit, emphasizing a premium and sophisticated event aesthetic. This image represents the latest trends in floral decoration for 2024." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcpkZDEWYoBOkEpa9Cg4MPzjUuXexulPhQzfEc_Ud3gJCVXWQAQ8vnwmYpCNQZEmPZvdcNxqbf3Pk1HAKCTTD3UoFiszuXtM4exJOA9AY3qRIx_GjAx5YDJipZp6i3WFntVeRDs5nKmL_3JvTPzn5MPNqFJyTtpU03LXPZyUSq8bQ0-NbGKTnAHyRvcRyKlgnSuEdQYr45Z-x7FuWrXPazq54hhZDr1o6CrG1uiCvXH6JxE45Aoy2l5ftoJpc7fa4QsP7gBR4feS-Q')"></div>
+</div>
+<span class="text-xs font-label-md text-lavender-deep mb-2 block">TREN 2024</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 group-hover:text-lavender-deep transition-colors">Tren Dekorasi Bunga Minimalis untuk Pernikahan Modern</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3">Eksplorasi gaya dekorasi bunga modern yang mengedepankan kesederhanaan namun tetap memberikan kesan mewah yang tak terlupakan.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact & Map Section -->
+<section class="py-section-gap-lg bg-surface-container" id="contact">
+<div class="max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-12 items-stretch">
+<div class="reveal glass-card p-12 rounded-3xl active">
+<h2 class="font-headline-md text-headline-md mb-8">Hubungi Kami</h2>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-lavender-deep flex-shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Alamat Kantor</h4>
+<p class="text-on-surface-variant">Jl. Bunga Melati No. 45, Jakarta Selatan, Indonesia</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-lavender-deep flex-shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Telepon / WhatsApp</h4>
+<p class="text-on-surface-variant">0819-0510-0992</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-lavender-deep flex-shrink-0">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Jam Operasional</h4>
+<p class="text-on-surface-variant">Sen-Jum: 08:00 - 17:00 | Sab: 08:00 - 16:00</p>
+<p class="text-status-green font-semibold text-sm mt-1">Layanan Online 24/7 Tersedia</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center justify-center gap-4 w-full py-5 bg-lavender-deep text-white rounded-2xl font-label-md text-lg hover:shadow-2xl hover:scale-[1.02] transition-all" href="https://wa.link/yfwmwg">
+<span class="material-symbols-outlined">send</span>
+                        Pesan Sekarang via WhatsApp
+                    </a>
+</div>
+</div>
+<div class="reveal rounded-3xl overflow-hidden shadow-xl min-h-[400px] active">
+<div class="w-full h-full bg-slate-200 flex items-center justify-center relative">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center" data-location="Jakarta, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7pa3skKMdvfT3Q9N5wMeTH14pfPTewUZHxCLt53BxWiaylFuyhoWFXOgtkzEYNvbz5MHKD3Yymp1OAFFGI7XR2w30m-Ms3dX2tTHblcM98hVtCJmZ5oSvx5p4kdX-3HHWzUQNF-_W71wEIDd2N6Kqvtcr_XIaLFLtK5MqfDVv4SmOmN9f_18FSSnRfZWGuXOzJFVuoXqhq34_enzmdwlOAGTeAoWnxhamWseIpRRx4jUnTBZ0LIUB1U521AMcdbiu9TUawOMIgQhJ')"></div>
+<div class="relative z-10 bg-white/90 p-4 rounded-xl shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-lavender-deep">push_pin</span>
+<span class="font-label-md text-label-md">Lokasi Lavanda Florist</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-floral-cream dark:bg-surface-container-lowest py-section-gap-sm border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-stack-gap">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Logo" class="h-8" src="https://lh3.googleusercontent.com/aida/AP1WRLsUtYlz5PdsIFs9EaBNWld7tcf0fLXhmhvGxSy1ub4IAUSqxyQZtXoNqKFKmaNe47ICfFB-VVA96lxKrQ9Y3lNSh3AN-Pie8Ah_0qxWg7V6tslPg9uNCNUKzndIXZ4LEC1etv06z4R5u6eDrzZCPFspWiyZyzzoaOjfUmsUuDr3Mi_j1b-fXR0Y2wE7h9d777W_8KECST1h4nh1i1HQtdqDVft5LfIfBFY622P_FJQNfvj6geNAXrScHv7t">
+<span class="font-headline-sm text-headline-sm font-bold text-lavender-deep">Lavanda</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">
+                    Modern Luxury Florist menghadirkan keindahan alam langsung ke depan pintu Anda dengan desain eksklusif dan bunga segar pilihan.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-lavender-deep/30 flex items-center justify-center text-lavender-deep hover:bg-lavender-deep hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">qr_code_2</span></a>
+<a class="w-10 h-10 rounded-full border border-lavender-deep/30 flex items-center justify-center text-lavender-deep hover:bg-lavender-deep hover:text-white transition-all" href="https://www.instagram.com/lavanda_florist"><span class="material-symbols-outlined text-lg">camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-lavender-deep">Menu Cepat</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Beranda</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#about">Tentang Kami</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#katalog">Katalog Bunga</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#blog">Blog &amp; Berita</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-lavender-deep">Layanan Pelanggan</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Kontak</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Syarat &amp; Ketentuan</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Kebijakan Privasi</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-lavender-deep">Berlangganan</h4>
+<p class="text-on-surface-variant text-sm mb-4">Dapatkan update koleksi terbaru dan promo spesial dari kami.</p>
+<div class="flex">
+<input class="w-full bg-white border-outline-variant/30 rounded-l-xl focus:ring-lavender-deep focus:border-lavender-deep text-sm px-4" placeholder="Email Anda" type="email">
+<button class="bg-lavender-deep text-white px-4 rounded-r-xl hover:bg-lavender-deep/90 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-outline-variant/30 text-center">
+<p class="text-on-surface-variant text-xs">© 2024 Lavanda Florist. Modern Luxury Florist. All rights reserved.</p>
+</div>
+</footer>
+<!-- Floating Buttons -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-4 z-[100]">
+<button class="hidden w-14 h-14 bg-white text-lavender-deep rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all border border-outline-variant/20" id="backToTop">
+<span class="material-symbols-outlined text-3xl">expand_less</span>
+</button>
+<a class="w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all" href="https://wa.link/yfwmwg" target="_blank">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 2.962 1.277 4.555 1.278 5.328 0 9.664-4.335 9.667-9.664 0-2.583-1.005-5.011-2.831-6.838-1.827-1.826-4.256-2.83-6.837-2.83-5.328 0-9.664 4.337-9.667 9.665-.001 1.701.443 3.358 1.285 4.83l-.813 2.97 3.038-.797zm11.266-6.425c-.269-.135-1.59-.783-1.836-.873-.247-.089-.426-.135-.606.135-.179.269-.694.873-.851 1.052-.157.179-.313.202-.583.067-.269-.135-1.138-.419-2.167-1.337-.801-.715-1.341-1.598-1.498-1.867-.157-.269-.017-.414.118-.549.121-.121.269-.314.404-.471.135-.157.179-.269.269-.449.09-.179.045-.337-.022-.471-.067-.135-.606-1.46-.83-2.002-.218-.524-.439-.453-.606-.461-.157-.008-.337-.01-.517-.01-.179 0-.471.067-.718.337-.247.269-.943.921-.943 2.245s.965 2.599 1.1 2.779c.135.179 1.9 2.9 4.603 4.071.642.278 1.144.444 1.534.569.645.205 1.233.176 1.697.108.518-.077 1.59-.65 1.815-1.278.225-.628.225-1.167.157-1.278-.067-.112-.247-.179-.516-.314z"></path></svg>
+</a>
+</div>
+<script>
+        // Scroll Reveal Implementation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Navbar state & Back to top
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            const btt = document.getElementById('backToTop');
+            
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-md');
+                btt.classList.remove('hidden');
+                btt.classList.add('flex');
+            } else {
+                nav.classList.remove('shadow-md');
+                btt.classList.add('hidden');
+                btt.classList.remove('flex');
+            }
+        };
+
+        document.getElementById('backToTop').onclick = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+
+
+
+</body></html>
