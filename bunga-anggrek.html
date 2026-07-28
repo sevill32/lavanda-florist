@@ -354,15 +354,18 @@
 </div>
 </footer>
 <script>
-        // Interactive Hover Script for thumbnails
-        document.querySelectorAll('.aspect-square').forEach(thumb => {
-            thumb.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.05)';
-            });
-            thumb.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
-          // Mobile Burger Menu
+    // Interactive Hover Script for thumbnails
+    document.querySelectorAll('.aspect-square').forEach(thumb => {
+        thumb.addEventListener('mouseenter', function () {
+            this.style.transform = 'scale(1.05)';
+        });
+
+        thumb.addEventListener('mouseleave', function () {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    // Mobile Burger Menu
     const burgerButton = document.getElementById("burgerButton");
     const mobileMenu = document.getElementById("mobileMenu");
 
@@ -376,9 +379,8 @@
                 mobileMenu.classList.add("hidden");
             });
         });
-        });
-  });
-    </script>
+    }
+</script>
 
 
 </body></html>
