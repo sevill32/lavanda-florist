@@ -406,33 +406,49 @@
 </div>
 </footer>
 <script>
-        // Intersection Observer for scroll reveal animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    // Intersection Observer for scroll reveal animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Navbar scroll effect
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                nav.classList.add('h-16', 'shadow-md');
-                nav.classList.remove('h-20', 'shadow-sm');
-            } else {
-                nav.classList.remove('h-16', 'shadow-md');
-                nav.classList.add('h-20', 'shadow-sm');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
             }
-              
         });
-    </script>
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            nav.classList.add('h-16', 'shadow-md');
+            nav.classList.remove('h-20', 'shadow-sm');
+        } else {
+            nav.classList.remove('h-16', 'shadow-md');
+            nav.classList.add('h-20', 'shadow-sm');
+        }
+    });
+
+    // Mobile Burger Menu
+    const burgerButton = document.getElementById("burgerButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (burgerButton && mobileMenu) {
+        burgerButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    }
+</script>
 </body></html>
