@@ -125,28 +125,65 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md scroll-smooth">
-<!-- Sticky TopNavBar -->
+<!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
 <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
 <div class="flex items-center gap-4">
-<img alt="Lavanda Florist Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsUtYlz5PdsIFs9EaBNWld7tcf0fLXhmhvGxSy1ub4IAUSqxyQZtXoNqKFKmaNe47ICfFB-VVA96lxKrQ9Y3lNSh3AN-Pie8Ah_0qxWg7V6tslPg9uNCNUKzndIXZ4LEC1etv06z4R5u6eDrzZCPFspWiyZyzzoaOjfUmsUuDr3Mi_j1b-fXR0Y2wE7h9d777W_8KECST1h4nh1i1HQtdqDVft5LfIfBFY622P_FJQNfvj6geNAXrScHv7t">
+<img
+    src="images/lavanda-logo.png"
+    alt="Lavanda Florist Logo"
+    class="h-12 w-auto object-contain">
 <span class="hidden md:block font-headline-md text-headline-md font-bold text-lavender-deep">Lavanda Florist</span>
 </div>
+<!-- Desktop Nav -->
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Beranda</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Tentang Kami</a>
-<a class="font-label-md text-label-md text-lavender-deep border-b-2 border-lavender-deep pb-1 font-bold" href="#">Katalog</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Blog</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Kontak</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="index.html">Beranda</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="tentang-kami.html">Tentang Kami</a>
+<a class="font-label-md text-label-md text-lavender-deep border-b-2 border-lavender-deep pb-1 font-bold" href="katalog-produk.html">Katalog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#blog">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#contact">Kontak</a>
 </div>
 <div class="flex items-center gap-4">
-<a class="hidden sm:inline-flex items-center px-6 py-2.5 bg-lavender-deep text-white rounded-full font-label-md text-label-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300" href="https://wa.link/yfwmwg" target="_blank">Hubungi Kami</a>
-<button class="md:hidden text-lavender-deep">
-<span class="material-symbols-outlined text-3xl">menu</span>
+<a class="hidden sm:inline-flex items-center px-6 py-2.5 bg-lavender-deep text-white rounded-full font-label-md text-label-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300" href="https://wa.link/yfwmwg" target="_blank">
+                    Hubungi Kami
+                </a>
+<button id="burgerButton" class="md:hidden text-lavender-deep">
+    <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
 </nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="hidden fixed top-20 left-0 w-full bg-white shadow-xl z-40 md:hidden">
+
+    <a href="index.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Beranda
+    </a>
+
+    <a href="tentang-kami.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Tentang Kami
+    </a>
+
+    <a href="katalog-produk.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Katalog
+    </a>
+
+    <a href="#blog" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Blog
+    </a>
+
+    <a href="#contact" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Kontak
+    </a>
+
+    <a href="https://wa.link/yfwmwg"
+       target="_blank"
+       class="block m-5 text-center bg-lavender-deep text-white py-3 rounded-xl">
+        Hubungi Kami
+    </a>
+
+</div>
 <!-- Premium Hero Section -->
 <header class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden pt-20">
 <div class="absolute inset-0">
