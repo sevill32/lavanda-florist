@@ -156,12 +156,43 @@
 <a class="hidden sm:inline-flex items-center px-6 py-2.5 bg-lavender-deep text-white rounded-full font-label-md text-label-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300" href="https://wa.link/yfwmwg" target="_blank">
                     Hubungi Kami
                 </a>
-<button class="md:hidden text-lavender-deep">
-<span class="material-symbols-outlined text-3xl">menu</span>
+<button id="burgerButton" class="md:hidden text-lavender-deep">
+    <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
 </nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="hidden fixed top-20 left-0 w-full bg-white shadow-xl z-40 md:hidden">
+
+    <a href="#" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Beranda
+    </a>
+
+    <a href="#about" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Tentang Kami
+    </a>
+
+    <a href="#katalog" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Katalog
+    </a>
+
+    <a href="#blog" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Blog
+    </a>
+
+    <a href="#contact" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Kontak
+    </a>
+
+    <a href="https://wa.link/yfwmwg"
+       target="_blank"
+       class="block m-5 text-center bg-lavender-deep text-white py-3 rounded-xl">
+        Hubungi Kami
+    </a>
+
+</div>
 <!-- Hero Section -->
 <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -631,6 +662,18 @@
         document.getElementById('backToTop').onclick = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
+        const burgerButton = document.getElementById("burgerButton");
+const mobileMenu = document.getElementById("mobileMenu");
+
+burgerButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+});
+});
     </script>
 
 
