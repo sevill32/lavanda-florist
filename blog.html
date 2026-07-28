@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog - Lavanda Florist | Inspirasi &amp; Tips Floral</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e0b8f2",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#fff7fc",
+                    "inverse-on-surface": "#f6eff4",
+                    "surface-variant": "#e8e0e5",
+                    "primary": "#704f81",
+                    "outline": "#7d747e",
+                    "tertiary-fixed-dim": "#c7cc7d",
+                    "status-green": "#74A892",
+                    "on-secondary-fixed": "#1b1c1a",
+                    "background": "#fff7fc",
+                    "text-charcoal": "#2D2D2D",
+                    "lavender-deep": "#8E6DA3",
+                    "on-tertiary-fixed-variant": "#464a08",
+                    "on-surface-variant": "#4b444d",
+                    "surface-bright": "#fff7fc",
+                    "price-accent": "#D97D54",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f9f1f6",
+                    "on-primary-container": "#fffbff",
+                    "on-tertiary-fixed": "#1b1d00",
+                    "secondary-fixed-dim": "#c8c6c3",
+                    "primary-container": "#8a689c",
+                    "on-primary-fixed": "#2b0d3c",
+                    "on-background": "#1e1b1e",
+                    "inverse-primary": "#e0b8f2",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1e1b1e",
+                    "surface-tint": "#725284",
+                    "surface-container-highest": "#e8e0e5",
+                    "surface-container": "#f3ecf1",
+                    "outline-variant": "#cec3ce",
+                    "on-tertiary-container": "#ffffd8",
+                    "surface-container-high": "#eee6eb",
+                    "on-secondary-container": "#636360",
+                    "secondary-fixed": "#e4e2de",
+                    "secondary-container": "#e1dfdc",
+                    "tertiary-container": "#747934",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "lavender-mist": "#E6DFF0",
+                    "tertiary-fixed": "#e3e897",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#332f33",
+                    "secondary": "#5e5e5c",
+                    "tertiary": "#5b601e",
+                    "primary-fixed": "#f5d9ff",
+                    "floral-cream": "#FAF5EF",
+                    "surface-dim": "#dfd8dd",
+                    "on-primary-fixed-variant": "#593a6b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap-lg": "120px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "stack-gap": "12px",
+                    "section-gap-sm": "64px"
+            },
+            "fontFamily": {
+                    "price-display": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "price-display": ["20px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FAF5EF; /* floral-cream as base */
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blog-card-shadow {
+            box-shadow: 0 10px 30px -10px rgba(112, 79, 129, 0.1);
+        }
+        .blog-card-shadow:hover {
+            box-shadow: 0 20px 40px -15px rgba(112, 79, 129, 0.2);
+        }
+    </style>
+</head>
+<body class="text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<img
+    src="images/lavanda-logo.png"
+    alt="Lavanda Florist Logo"
+    class="h-12 w-auto object-contain">
+<span class="hidden md:block font-headline-md text-headline-md font-bold text-lavender-deep">Lavanda Florist</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="index.html">Beranda</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="tentang-kami.html">Tentang Kami</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="katalog-produk.html">Katalog</a>
+<a class="font-label-md text-label-md text-lavender-deep border-b-2 border-lavender-deep pb-1 font-bold" href="blog.html">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="kontak.html">Kontak</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center px-6 py-2.5 bg-lavender-deep text-white rounded-full font-label-md text-label-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300" href="https://wa.link/yfwmwg" target="_blank">
+                    Hubungi Kami
+                </a>
+<button id="burgerButton" class="md:hidden text-lavender-deep">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="hidden fixed top-20 left-0 w-full bg-white shadow-xl z-40 md:hidden">
+
+    <a href="index.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Beranda
+    </a>
+
+    <a href="tentang-kami.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Tentang Kami
+    </a>
+
+    <a href="katalog-produk.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Katalog
+    </a>
+
+    <a href="blog.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Blog
+    </a>
+
+    <a href="kontak.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Kontak
+    </a>
+
+    <a href="https://wa.link/yfwmwg"
+       target="_blank"
+       class="block m-5 text-center bg-lavender-deep text-white py-3 rounded-xl">
+        Hubungi Kami
+    </a>
+
+</div>
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110" data-alt="A serene and luxurious close-up of soft lavender and white flowers with morning dew, bathed in golden hour light. The atmosphere is ethereal and airy, with a soft blur in the background suggesting a sun-drenched European floral boutique. The colors are dominated by lavender mist, cream, and soft greens, creating a calm and sophisticated editorial mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBx-l1F-dC-Y3kBiGuD27eN_qTeOtvGsEy7gQ0uUfzb00MoJ1LxJtS4UDtDThcLvEAixrYLvyk1p3DiQxn6aEZgcqERTTVwpcK-1rujPt5koLWLxhddPCI_nB1iJyq3hSA55ltAW4-CUipf1O2Me-rAMpWRlKJ7-FCN7-GCgl-AEURVKhG9RVQQTAfJuaL7Mfn0gVqUdH5TRKKHYypajt0MHsr1fMCZTY6_cmqQLbb-6Czf9nmXEdjyUBO0mdxNzMiyNgXyKRYCKf8S')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 text-center px-gutter">
+<span class="font-label-md text-label-md text-white uppercase tracking-widest mb-4 block">Inspirasi Harian</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6">Inspirasi &amp; Tips Floral</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">Seni merangkai bunga dan panduan perawatan untuk menghadirkan keindahan alam ke dalam hunian Anda.</p>
+</div>
+</section>
+<!-- Main Content: Blog Post Grid -->
+<main class="max-w-container-max mx-auto px-gutter py-section-gap-sm md:py-section-gap-lg">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-12 border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-md text-headline-md text-primary">Artikel Terbaru</h2>
+<div class="flex gap-4 mt-4 md:mt-0">
+<button class="font-label-md text-label-md text-primary border-b-2 border-primary">Semua</button>
+<button class="font-label-md text-label-md text-secondary hover:text-primary transition-colors">Tips</button>
+<button class="font-label-md text-label-md text-secondary hover:text-primary transition-colors">Makna Bunga</button>
+<button class="font-label-md text-label-md text-secondary hover:text-primary transition-colors">Tren 2024</button>
+</div>
+</div>
+<!-- Bento-inspired Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Post 1: Large Featured -->
+<article class="md:col-span-2 blog-card-shadow bg-white rounded-xl overflow-hidden transition-all duration-300 flex flex-col md:flex-row group">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of a vibrant purple orchid in a ceramic pot, sunlight filtering through a window creating soft shadows. The scene is clean, minimal, and sophisticated, reflecting a modern interior design style. The orchid's petals are detailed with delicate textures, emphasizing natural elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjwmC6p-6wZMO2zCQPlsxeYcA0S8iLx90GA5SZpr8AQzotI7c4nkvE7e77YDedOW4N2G1-iq3HmDne6CIwsWX3ZN4j_OmpNtYGK_aHPV0QOYK0htIkKXm2oZL7lvppRQ1yNhIu-E1RqyulXCDsMqN01bdoHQkMlgTMHp6LgqsVk-6gCJBXlzRcyvyIT9qulrMwrR-71_W0grurOH1fJrXJvAiTOB7ePs3czy-q_6ySSMORKYK4jAAr4B61OeQFBzw8rQuLSRefxVKJ"/>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center">
+<time class="font-label-md text-label-md text-lavender-deep mb-3">12 Mei 2024</time>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4 group-hover:text-primary transition-colors">Tips Merawat Bunga Anggrek Agar Awet</h3>
+<p class="font-body-md text-body-md text-secondary mb-6 line-clamp-3">Temukan rahasia para ahli dalam menjaga kesegaran anggrek Anda. Dari pencahayaan yang tepat hingga frekuensi penyiraman yang ideal untuk iklim tropis.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary group-hover:underline underline-offset-4" href="#">
+                        Baca Selengkapnya
+                        <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="blog-card-shadow bg-white rounded-xl overflow-hidden transition-all duration-300 group">
+<div class="h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A lush bouquet of deep red roses arranged in a classic crystal vase on a white marble table. The lighting is dramatic yet soft, highlighting the velvet texture of the petals. The overall aesthetic is romantic and luxurious, characteristic of high-end floral photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpBTeJlYiECMNiYI3S6nGsXlycO_kR8OhdAKhp35KjEze2JyBsugDDdX90057OnJ26xyD_xV1L-utVgXCFNlcIVx6NIx0a0RTYN8ubSGVJLBXXzkwy-FmWkSmwTNEK9A0yP_WODuz0tXbFQorWP6kUyzVo9JfNyxYLohszDUsrG7Hsa_e_aUwRv8eahrQcQq9c7iwcJteT5rX3A3DgM4NAM5yy2lUIXzvL2pCnmZ4PdFdXZVOTIKQhNsAtZyAz34W18mhhoumgIfjs"/>
+</div>
+<div class="p-6">
+<time class="font-label-md text-label-md text-lavender-deep mb-2 block">8 Mei 2024</time>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">Makna Dibalik Warna Mawar Merah</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 line-clamp-2">Lebih dari sekadar gairah, mawar merah membawa pesan mendalam tentang pengabdian dan rasa hormat.</p>
+<a class="font-label-md text-label-md text-primary inline-flex items-center" href="#">
+                        Baca Selengkapnya
+                        <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Post 3 -->
+<article class="blog-card-shadow bg-white rounded-xl overflow-hidden transition-all duration-300 group">
+<div class="h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An elegantly decorated dining table featuring minimalist flower arrangements in small glass bud vases. The table setting includes linen napkins, fine porcelain, and polished silver under soft, warm lighting. The flowers are a mix of wildflowers and cultivated blooms in shades of lavender and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQinW1jGVXZH-1Hb_3EqG4Iwkw4miKVZN6GaZvOa12W3fUiAg-QW4ubWkIxhclxKBVJ2Prj6SF4XuAKQO0E42TJI3giid1XW1u-XSySYv1lJsOKPZt1coEGGfOR717WydTk4rlBTcR_6JFxFzi_fYydIM-_UcG4y3o5lK1atFwez_NJhTxYLEACGtol2BcFdx8ga7CHM051Lh1yULifplMhbnRBMBTdFTxzpmxUJHTxE9dNkRlnSUaqF8_jo42aGxYHKMsv76rGu4r"/>
+</div>
+<div class="p-6">
+<time class="font-label-md text-label-md text-lavender-deep mb-2 block">5 Mei 2024</time>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">Inspirasi Dekorasi Meja dengan Bunga Segar</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 line-clamp-2">Ubah suasana makan malam Anda menjadi momen berkelas dengan sentuhan bunga meja yang minimalis namun elegan.</p>
+<a class="font-label-md text-label-md text-primary inline-flex items-center" href="#">
+                        Baca Selengkapnya
+                        <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Post 4 -->
+<article class="blog-card-shadow bg-white rounded-xl overflow-hidden transition-all duration-300 group">
+<div class="h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern bridal bouquet featuring cascading white lilies, purple lavender sprigs, and eucalyptus leaves tied with a silk lavender ribbon. The bride holds the bouquet against a soft-focus garden background. The lighting is bright and airy, emphasizing a modern wedding aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4czligUzrGYOTBs3KEvAULtkQ0DJ49jCI76X7V0LtAwcW2Bj2yfXegjO62xUuaRDvkMxuciUNaBlbNB-tjLeIl-h-ai-jvYMH07x5Vq-rqLpfJ-vrPyNyKkDC9_FqCkGr5aeJi_TZCw0wfZqM1NANidiLzDJpE58wBkrJMtBh8TzmVM9iJ8UvQ4R7wpw5nBgJmUQd9l65afIgG64lLHhDdVqMEZHLsh7KKLyqK7pxg7AhUKeYsEtSnp18KbSxK7NQzSXSsJslvBXQ"/>
+</div>
+<div class="p-6">
+<time class="font-label-md text-label-md text-lavender-deep mb-2 block">2 Mei 2024</time>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">Tren Buket Pengantin 2024</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 line-clamp-2">Gaya cascading dan palet warna lavender yang lembut mendominasi tren pernikahan tahun ini.</p>
+<a class="font-label-md text-label-md text-primary inline-flex items-center" href="#">
+                        Baca Selengkapnya
+                        <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Post 5 (New Insight) -->
+<article class="blog-card-shadow bg-white rounded-xl overflow-hidden transition-all duration-300 group">
+<div class="h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A florist's workbench with various green leaves, scissors, and twine on a rustic wooden table. The focus is on the tools and the organic textures of the stems. The overall mood is artisanal and creative, showcasing the craft of floral arrangement in a sunlit studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOHUKHm7rYSC4xODTVX9pIKFHWknsXQzXNHhZ-kshyIjsaJUUeWqtBkI4svo0hO-5f6UGz98OazSQeBYgyJkzExbjkEu59auEcNkLpSDF3-IluHLy3v2RFmgevnYGKEBFNTfx4D0-lGxK-1VzOxs5MRe8O1dCSySZ5hKRq7efnVQOa54Cma-ohLWtorjF1Xlp4Yv8AtdNC2lgo4oWTF2gIyjhr11CAYHOiPub8SVYbr3XW3G7P6Pjdlt0Mc_0r_sCwRaRZPCjUySp_"/>
+</div>
+<div class="p-6">
+<time class="font-label-md text-label-md text-lavender-deep mb-2 block">28 April 2024</time>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">Workshop: Dasar Merangkai Bunga</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 line-clamp-2">Mengenal teori warna dan struktur dasar dalam membuat buket tangan yang seimbang secara visual.</p>
+<a class="font-label-md text-label-md text-primary inline-flex items-center" href="#">
+                        Baca Selengkapnya
+                        <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<!-- Newsletter Section -->
+<section class="bg-lavender-mist py-section-gap-sm px-gutter mb-section-gap-sm">
+<div class="max-w-container-max mx-auto bg-white rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 blog-card-shadow">
+<div class="md:w-1/2">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Bergabung dengan Komunitas Kami</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-0">Dapatkan tips eksklusif, inspirasi mingguan, dan penawaran khusus langsung di kotak masuk Anda.</p>
+</div>
+<div class="md:w-1/2 w-full">
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow px-6 py-4 rounded-full border-none bg-floral-cream focus:ring-2 focus:ring-primary text-body-md font-body-md" placeholder="Alamat Email Anda" required="" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-full font-label-md text-label-md hover:shadow-lg transition-all active:scale-95" type="submit">Langganan</button>
+</form>
+<p class="mt-4 text-xs text-outline font-body-md italic text-center md:text-left">*Kami menjaga privasi Anda dengan sangat hati-hati.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-floral-cream dark:bg-surface-container-lowest py-section-gap-sm border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-stack-gap">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img
+    src="images/lavanda-logo.png"
+    alt="Logo"
+    class="h-8">
+<span class="font-headline-sm text-headline-sm font-bold text-lavender-deep">Lavanda</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">
+                    Modern Luxury Florist menghadirkan keindahan alam langsung ke depan pintu Anda dengan desain eksklusif dan bunga segar pilihan.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-lavender-deep/30 flex items-center justify-center text-lavender-deep hover:bg-lavender-deep hover:text-white transition-all" href="https://lavanda-florist.vercel.app/"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="w-10 h-10 rounded-full border border-lavender-deep/30 flex items-center justify-center text-lavender-deep hover:bg-lavender-deep hover:text-white transition-all" href="https://www.instagram.com/lavanda_florist"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+<a class="w-10 h-10 rounded-full border border-lavender-deep/30 flex items-center justify-center text-lavender-deep hover:bg-lavender-deep hover:text-white transition-all" href="https://wa.me/081905100992"><span class="material-symbols-outlined text-lg">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-lavender-deep">Menu Cepat</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="index.html">Beranda</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="tentang-kami.html">Tentang Kami</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="katalog-produk.html">Katalog Bunga</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="blog.html">Blog &amp; Berita</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-lavender-deep">Layanan Pelanggan</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Kontak</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Syarat &amp; Ketentuan</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">Kebijakan Privasi</a></li>
+<li class=""><a class="text-on-surface-variant hover:underline decoration-lavender-deep text-sm" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-lavender-deep">Berlangganan</h4>
+<p class="text-on-surface-variant text-sm mb-4">Dapatkan update koleksi terbaru dan promo spesial dari kami.</p>
+<div class="flex">
+<input class="w-full bg-white border-outline-variant/30 rounded-l-xl focus:ring-lavender-deep focus:border-lavender-deep text-sm px-4" placeholder="Email Anda" type="email">
+<button class="bg-lavender-deep text-white px-4 rounded-r-xl hover:bg-lavender-deep/90 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-outline-variant/30 text-center">
+<p class="text-on-surface-variant text-xs">© 2026 Lavanda Florist. Modern Luxury Florist. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for nav header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-floral-cream/95');
+                header.classList.remove('py-4', 'bg-floral-cream/80');
+            } else {
+                header.classList.add('py-4', 'bg-floral-cream/80');
+                header.classList.remove('py-2', 'bg-floral-cream/95');
+            }
+        });
+
+        // Simple observer for card animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('article').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+  // Mobile Burger Menu
+    const burgerButton = document.getElementById("burgerButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (burgerButton && mobileMenu) {
+        burgerButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    }
+    </script>
+</body></html>
