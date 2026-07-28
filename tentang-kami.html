@@ -117,21 +117,64 @@
 </head>
 <body class="bg-surface font-body-md text-on-surface">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm dark:shadow-none h-20 transition-all duration-300">
-<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-full">
-<a class="font-headline-md text-headline-md font-bold text-lavender-deep dark:text-primary-fixed-dim" href="#">Lavanda Florist</a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Beranda</a>
-<a class="font-label-md text-label-md text-lavender-deep border-b-2 border-lavender-deep pb-1 font-bold" href="#">Tentang Kami</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Katalog</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Blog</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#">Kontak</a>
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<img
+    src="images/lavanda-logo.png"
+    alt="Lavanda Florist Logo"
+    class="h-12 w-auto object-contain">
+<span class="hidden md:block font-headline-md text-headline-md font-bold text-lavender-deep">Lavanda Florist</span>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all scale-95 active:scale-90">
-                Hubungi Kami
-            </button>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="index.html">Beranda</a>
+<a class="font-label-md text-label-md text-lavender-deep border-b-2 border-lavender-deep pb-1 font-bold" href="tentang-kami.html">Tentang Kami</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#katalog">Katalog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#blog">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-lavender-deep transition-colors" href="#contact">Kontak</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center px-6 py-2.5 bg-lavender-deep text-white rounded-full font-label-md text-label-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300" href="https://wa.link/yfwmwg" target="_blank">
+                    Hubungi Kami
+                </a>
+<button id="burgerButton" class="md:hidden text-lavender-deep">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
 </div>
 </nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="hidden fixed top-20 left-0 w-full bg-white shadow-xl z-40 md:hidden">
+
+    <a href="index.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Beranda
+    </a>
+
+    <a href="tentang-kami.html" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Tentang Kami
+    </a>
+
+    <a href="#katalog" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Katalog
+    </a>
+
+    <a href="#blog" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Blog
+    </a>
+
+    <a href="#contact" class="block px-6 py-4 border-b hover:bg-gray-50">
+        Kontak
+    </a>
+
+    <a href="https://wa.link/yfwmwg"
+       target="_blank"
+       class="block m-5 text-center bg-lavender-deep text-white py-3 rounded-xl">
+        Hubungi Kami
+    </a>
+
+</div>
 <!-- Hero Section -->
 <header class="relative h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
