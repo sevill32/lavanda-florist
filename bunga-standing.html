@@ -190,9 +190,9 @@
 <div class="max-w-container-max mx-auto px-gutter">
 <!-- Breadcrumb -->
 <nav class="flex items-center space-x-2 mb-10 text-on-surface-variant font-label-md text-label-md">
-<a class="hover:text-lavender-deep transition-colors" href="#">Beranda</a>
+<a class="hover:text-lavender-deep transition-colors" href="index.html">Beranda</a>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<a class="hover:text-lavender-deep transition-colors" href="#">Katalog</a>
+<a class="hover:text-lavender-deep transition-colors" href="katalog-produk.html">Katalog</a>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 <span class="text-lavender-deep font-bold">Bunga Standing</span>
 </nav>
@@ -364,16 +364,18 @@
 </footer>
 <!-- Interactive Hover Script -->
 <script>
-        document.querySelectorAll('.aspect-square').forEach(thumb => {
-            thumb.addEventListener('mouseenter', function() {
-                // In a real app, this would change the main hero image
-                // Here we just add a visual scale effect
-                this.style.transform = 'scale(1.05)';
-            });
-            thumb.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
-          // Mobile Burger Menu
+    // Hover Effect
+    document.querySelectorAll('.aspect-square').forEach(thumb => {
+        thumb.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+
+        thumb.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    // Mobile Burger Menu
     const burgerButton = document.getElementById("burgerButton");
     const mobileMenu = document.getElementById("mobileMenu");
 
@@ -387,9 +389,7 @@
                 mobileMenu.classList.add("hidden");
             });
         });
-        });
-  });
-    </script>
-
+    }
+</script>
 
 </body></html>
